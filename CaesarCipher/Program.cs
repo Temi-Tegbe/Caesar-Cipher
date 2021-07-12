@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace CaesarCipher
 {
     class Program
@@ -33,30 +34,55 @@ namespace CaesarCipher
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Type a string to encrypt:");
-            string UserString = Console.ReadLine();
+            Console.WriteLine("What do you want to do? Encrypt or Decrypt?");
+            string answer = Console.ReadLine();
+            if (answer == "encrypt")
+            {
 
-            Console.WriteLine("\n");
 
-            Console.WriteLine("Enter your Key:");
-            int key = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\n");
+                Console.WriteLine("Type a string to encrypt:");
+                string UserString = Console.ReadLine();
 
-            Console.WriteLine("Encrytpted Data");
+                Console.WriteLine("\n");
 
-            string cipherText = Encipher(UserString, key);
-            Console.WriteLine(cipherText);
-            Console.WriteLine("\n");
+                Console.WriteLine("Enter your Key:");
+                int key = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("\n");
 
-            Console.WriteLine("Decrypted Data:");
+                Console.WriteLine("Encrypted Data");
 
-            string t = Decipher(cipherText, key);
-            Console.WriteLine(t);
-            Console.Write("\n");
+                string cipherText = Encipher(UserString, key);
+                Console.WriteLine(cipherText);
+                Console.WriteLine("\n");
 
-            Console.ReadKey();
+            }
+            if (answer == "decrypt")
+            {
+                Console.WriteLine("Type a string to decrypt:");
+                string UserString = Console.ReadLine();
 
+                Console.WriteLine("\n");
+
+                Console.WriteLine("Enter your Key:");
+                int key = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("\n");
+
+                Console.WriteLine("Decrypted Data:");
+                
+
+                string cipherText = Decipher(UserString, key);
+                Console.WriteLine(cipherText);
+                Console.WriteLine("\n");
+
+                //string t = Decipher(cipherText, key);
+                
+                Console.Write("\n");
+
+                Console.ReadKey();
+
+            }
         }
+    }
 
     }
-}
+
