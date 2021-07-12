@@ -34,9 +34,9 @@ namespace CaesarCipher
 
         static void Main(string[] args)
         {
-            Console.WriteLine("What do you want to do? Encrypt or Decrypt?");
+            Console.WriteLine("What do you want to do? e for encrypt | d for decrypt");
             string answer = Console.ReadLine();
-            if (answer == "encrypt")
+            if (answer == "e")
             {
 
 
@@ -56,7 +56,7 @@ namespace CaesarCipher
                 Console.WriteLine("\n");
 
             }
-            if (answer == "decrypt")
+            if (answer == "d")
             {
                 Console.WriteLine("Type a string to decrypt:");
                 string UserString = Console.ReadLine();
